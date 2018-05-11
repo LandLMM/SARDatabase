@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <title>Devices</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out used in the SARDatabase Project!
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="alert alert-success" role="alert">
+                A simple primary alert—check it out used in the SARDatabase Project!
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <form class="col-md-12">
+            <div class="form-group">
+                <label for="manufacturer">Manufacturer</label>
+                <input type="text" class="form-control" id="manufacturer">
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="model">Model</label>
+                <input type="number" class="form-control" id="model">
+                <div class="invalid-feedback"></div>
+            </div>
+            <!--<div class="form-group">
+                <label for="colors">Kolory</label>
+                <select id="colors" class="form-control">
+                    <option>Czarny</option>
+                    <option>Biały</option>
+                    <option>Niebieski</option>
+                    <option>Żółty</option>
+                    <option>Zielony</option>
+                    <option>Czerwony</option>
+                </select>
+                <button class="btn" id="add-color">Dodaj kolor</button>
+                <div id="selected-colors">
+                    <div id="color-template" class="alert alert-secondary alert-dismissible fade show d-none"
+                         role="alert">
+                        <strong></strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>-->
+            <div class="btn btn-primary" id="create-button">Add a device</div>
+            <button class="btn btn-primary" style="display: none" id="update-button">Edit the device</button>
+            <button class="btn btn-primary" style="display: none" id="cancel-button">Cancel</button>
+        </form>
+    </div>
+    <div class="row">
+        <table id="device-table" class="table table-striped col-md-12">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr id="row-template" class="d-none">
+                <td><a href="device-details.html" class="device-id"></a></td>
+                <td class="device-manufacturer"></td>
+                <td class="device-model"></td>
+                <td>
+                    <button class="btn btn-primary car-edit">Edit</button>
+                    <button class="btn btn-primary car-delete">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="delete-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Device deletion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure that you want to delete the selected device?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="delete-confirm-button">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
